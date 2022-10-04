@@ -7,7 +7,7 @@ pipeline
         stage('Hello') {
             steps {
                 sh 'mvn --version'
-                   }
+                  }
                         }
     }
 }
