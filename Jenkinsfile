@@ -7,6 +7,7 @@ pipeline
         stage('Unit Test') {
             steps {
                 sh 'mvn clean package -Dmaven.test.skip=true'
+                archiveArtifacts(artifacts: '**/*.jar', onlyIfSuccessful: true, fingerprint: true)
                   }
                         }
     }
