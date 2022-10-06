@@ -4,9 +4,9 @@ pipeline
       node { label 'EC2' }
            }
     stages {
-        stage('Hello') {
+        stage('Unit Test') {
             steps {
-                sh 'mvn --version'
+                sh 'mvn clean test'
                   }
                         }
     }
