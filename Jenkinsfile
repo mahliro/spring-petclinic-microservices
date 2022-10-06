@@ -6,7 +6,7 @@ pipeline
     stages {
         stage('Unit Test') {
             steps {
-                sh 'mvn --version '
+                sh 'mvn clean package -Dmaven.test.skip=true'
                   }
                         }
     }
